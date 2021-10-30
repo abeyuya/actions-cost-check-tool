@@ -58,7 +58,7 @@ const main = async (options: typeof argv) => {
 
   const result = { sum_billable_ms: sum, workflows: timingResponses };
 
-  console.log(JSON.stringify({ result }, null, 2));
+  console.log(JSON.stringify(result));
 };
 
 main(argv).catch(console.error);

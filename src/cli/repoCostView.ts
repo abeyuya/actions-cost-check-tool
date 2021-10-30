@@ -25,7 +25,7 @@ const argv = yargs
 const main = async (options: typeof argv) => {
   const result = await buildRepoCost(options);
 
-  const ubuntsCost = calclateGithubActionsCostUSD(
+  const ubuntuCost = calclateGithubActionsCostUSD(
     result.sum_billable_ms.UBUNTU,
     "LINUX"
   );
@@ -42,8 +42,8 @@ const main = async (options: typeof argv) => {
 
   console.log(
     JSON.stringify({
-      sum: ubuntsCost + macosCost + windowsCost,
-      ubuntsCost,
+      sum: ubuntuCost + macosCost + windowsCost,
+      ubuntuCost,
       macosCost,
       windowsCost,
     })

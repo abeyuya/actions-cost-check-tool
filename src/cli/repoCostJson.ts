@@ -1,6 +1,6 @@
 import * as yargs from "yargs";
 
-import { buildRepoCost } from "./common/repo";
+import { buildRepoCost } from "../common/repo";
 
 const argv = yargs
   .option("owner", {
